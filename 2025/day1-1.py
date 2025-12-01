@@ -12,11 +12,7 @@ with open('input', 'r') as f:
         else:
             dial += val
 
-        while dial < 0:
-            dial = 99 - abs(dial) + 1
-
-        while dial > 99:
-            dial = dial - 99 - 1
+        dial %= 100
 
         if dial == 0:
             count += 1
