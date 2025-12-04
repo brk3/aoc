@@ -13,7 +13,9 @@ ans = 0
 for n in ids:
     start, end = n.split('-')
     for i in range(int(start), int(end)+1):
-        if repeatedSubstringPattern(str(i)):
+        #if repeatedSubstringPattern(str(i)):
+        s = str(i)
+        if s in (s+s)[1:-1]:
             ans += i
 
 print(ans)
